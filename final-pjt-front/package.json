@@ -9,11 +9,16 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.3",
+    "moment": "^2.30.1",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
+    "require": "^0.4.4",
     "vue": "^3.4.21",
+    "vue-chartjs": "^5.3.1",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {

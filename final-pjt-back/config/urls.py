@@ -18,9 +18,20 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-
+from rest_framework_simplejwt.views import (
+    TokenObtainPairView,
+    TokenRefreshView,
+)
 urlpatterns = [
     path('admin/', admin.site.urls),
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    path('api/v1/backend/accounts/', include('accounts.urls')),
+    path('api/v1/backend/products/', include('products.urls')),
+    path('api/v1/backend/communities/', include('communities.urls')),
+    path('accounts/', include('dj_rest_auth.urls')),
+    path('accounts/signup/', include('dj_rest_auth.registration.urls')),
+    path('accounts/api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('accounts/api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+    path('api/v1/backend/recommend/', include('chatbot.urls')),
+]
 
 # handler404 = 'accounts.views.page_not_found'

@@ -1,0 +1,41 @@
+  
+  section > img {
+    height:700px;
+    width: 100%;
+    /* min-width: 1000px; */
+    background-size: cover;
+    filter:brightness(0.25);
+    overflow:hidden;
+    object-fit: auto;
+  }
+  section > h1 {
+    color: white;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    font-weight: bold;
+    transform: translate(0%, -50%);
+    font-size: 65px;
+  }
+  section > h4 {
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 10%;
+    transform: translate(0%, -50%);
+    font-size: 45px;    
+  }  
+  section > h4:last-child {
+    color: white;
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    transform: translate(0%, -50%);
+    font-size: 45px;    
+  }
+  .container-content {
+    margin: 0;
+    padding-left: 120px;
+    padding-right: 120px;
+    padding-top: 45px;
+   }

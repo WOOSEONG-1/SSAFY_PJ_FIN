@@ -12,5 +12,14 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  // server: {
+  //   proxy: {
+  //     '/dpi': {
+  //       target: 'https://quotation-api-cdn.dunamu.com',
+  //       changeOrigin: true,
+  //       rewrite: (path) => path.replace(/^\/dpi/, '')
+  //     }
+  //   }
+  // }
 })
